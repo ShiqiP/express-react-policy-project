@@ -1,0 +1,42 @@
+[
+  {
+    "id": "0",
+    "fullName": "admin",
+    "email": "admin@admin.admin",
+    "pwd": "",
+    "voted_policies": []
+  },
+  {
+    "id": "1",
+    "fullName": "ck",
+    "email": "shiqipam@gmail.com",
+    "pwd": "",
+    "voted_policies": [
+      "aaa"
+    ]
+  },
+  {
+    "id": "12EWCwTTUMSGoP5SPI2Cf",
+    "fullName": "shiqi",
+    "email": "shiqipam@foxmail.com",
+    "pwd": "",
+    "voted_policies": [
+      "X3XaNNee9_xi8toNSshgr",
+      "zM4RxS5x9ML0NQya_4MZp"
+    ]
+  },
+  {
+    "id": "tjTq0Xav5njpGrj2tR0E8",
+    "fullName": "shiqia",
+    "email": "450008475@qq.com",
+    "pwd": "",
+    "voted_policies": []
+  },
+  {
+    "id": "8PPvtBTfxfIVHG8ywLhHJ",
+    "fullName": "SPANG",
+    "email": "spang@miu.edu",
+    "pwd": "",
+    "voted_policies": []
+  }
+]
