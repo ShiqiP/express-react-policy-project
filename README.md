@@ -37,6 +37,5 @@ In addition to the previous requirements, groups must complete the following req
 * Create additional screen to show the policies posted by the current user.
 * Implement a search feature to allow guests/users to search for a policy by title.
 * In addition to displaying policies by number of votes, provide guests/users the ability to filter policies by category, and by date latest to oldest.  
-  
-Note that you have "admin" priviledge on your Git repository, one member of the group should add the other member to collaborate on one repository.
+
 
