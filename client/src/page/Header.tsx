@@ -52,7 +52,7 @@ function Header() {
                 </div>
                 <div onClick={handleAvatarClick} className="rounded-full bg-sky-800 h-12 w-12 flex justify-center items-center">
                     <div className="cursor-pointer text-white font-bold">
-                        {authContext.state.fullName.substring(0, 5) || "Guest"}
+                        {authContext.state.fullName ? authContext.state.fullName.substring(0, 5) : "Guest"}
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ import usePublic from '../methods/public'
 import { CategoryType } from "../utils/types"
 import { usePopup } from "../context/PopupContext";
 
-function AddPolicy({ isOpen, onClose }: { isOpen: boolean, onClose: Function }) {
+function AddPolicy({ isOpen, onClose,refresh }: { isOpen: boolean, onClose: Function,refresh }) {
     const [validForm, setValidForm] = useState({ title: true });
     const [form, setForm] = useState({ description: "", title: "", category: 0 })
     const [categories, setCategories] = useState<Array<CategoryType>>([]);
@@ -53,6 +53,7 @@ function AddPolicy({ isOpen, onClose }: { isOpen: boolean, onClose: Function }) 
 
         addPolicy({ description, owner: id, title, category, date: new Date().getTime() }).then(() => {
             handleDialogClose()
+            refresh();
             showPopup("Successfully add a policy!")
         }).catch(() => { })
     }

@@ -22,21 +22,22 @@ function PolicyList() {
     const go2Route = (id) => {
         navigate(`/policy/${id}`)
     }
+    const getData = async () => {
+        const res = await getPolicies({ categoryId: params.id });
+        const categories = await getCategories();
+        const data = res.map((el) => {
+            return { ...el, dateFormat: dayjs(el.date).format('MMM D'), categoryName: categories.find(c => c.id == el.category).name }
+        })
+        setPolicyList(data as Array<any>);
+    }
     useEffect(() => {
-        const getData = async () => {
-            const res = await getPolicies({ categoryId: params.id });
-            const categories = await getCategories();
-            const data = res.map((el) => {
-                return { ...el, dateFormat: dayjs(el.date).format('MMM D'), categoryName: categories.find(c => c.id == el.category).name }
-            })
-            setPolicyList(data as Array<any>);
-        }
+
         getData();
     }, [params])
 
     return (
         <>
-            <AddPolicy isOpen={isOpen} onClose={handleOnClose} />
+            <AddPolicy isOpen={isOpen} onClose={handleOnClose} refresh={getData} />
             <div className="p-8 w-full relative h-full">
                 {/* Sticky header button */}
                 <div className="sticky top-0 bg-white z-10">
